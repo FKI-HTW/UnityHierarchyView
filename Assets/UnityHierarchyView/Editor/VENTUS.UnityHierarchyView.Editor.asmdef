@@ -2,7 +2,8 @@
     "name": "VENTUS.UnityHiearchyView.Editor",
     "rootNamespace": "VENTUS.UnityHiearchyView",
     "references": [
-        "GUID:14295037dc7f2bc4f8ce6e6ca20d074e"
+        "GUID:14295037dc7f2bc4f8ce6e6ca20d074e",
+        "GUID:39961c1a518d863428ba3e1a7067a2c3"
     ],
     "includePlatforms": [
         "Editor"
