@@ -1,9 +1,9 @@
 {
-    "name": "VENTUS.UnityHiearchyView.Editor",
-    "rootNamespace": "VENTUS.UnityHiearchyView",
+    "name": "CENTIS.UnityFileExplorer.Editor",
+    "rootNamespace": "CENTIS.UnityFileExplorer",
     "references": [
         "GUID:14295037dc7f2bc4f8ce6e6ca20d074e",
-        "GUID:39961c1a518d863428ba3e1a7067a2c3"
+        "GUID:d2c195ebd1878eb469630f91eebf2707"
     ],
     "includePlatforms": [
         "Editor"

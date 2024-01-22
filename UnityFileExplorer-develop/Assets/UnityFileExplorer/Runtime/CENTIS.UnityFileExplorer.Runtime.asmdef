@@ -1,6 +1,6 @@
 {
-    "name": "VENTUS.UnityHiearchyView.Runtime",
-    "rootNamespace": "VENTUS.UnityHiearchyView",
+    "name": "CENTIS.UnityFileExplorer.Runtime",
+    "rootNamespace": "CENTIS.UnityFileExplorer",
     "references": [
         "GUID:14295037dc7f2bc4f8ce6e6ca20d074e"
     ],
