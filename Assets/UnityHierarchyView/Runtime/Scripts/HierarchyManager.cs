@@ -9,8 +9,8 @@ namespace VENTUS.UnityHierarchyView
 		public UINode NodePrefab { get => _nodePrefab; set => _nodePrefab = value; }
 		[SerializeField] private UINode _nodePrefab;
 
-		public GameObject HierarchyContainer { get => _hierarchyContainer; }
-        [SerializeField] private GameObject _hierarchyContainer;
+		public Transform HierarchyContainer { get => _hierarchyContainer; }
+        [SerializeField] private Transform _hierarchyContainer;
 
         private TreeViewNode _parent;
 

@@ -57,7 +57,7 @@ namespace VENTUS.UnityHierarchyView
 
 		public void Dispose()
 		{
-			Dispose(disposing: true);
+			Dispose(true);
 			GC.SuppressFinalize(this);
 		}
 
@@ -86,30 +86,18 @@ namespace VENTUS.UnityHierarchyView
         {
 			mUIInstance = GameObject.Instantiate(
                 mMgrRef.NodePrefab,
-                mParentRef == null 
-					? mMgrRef.HierarchyContainer.transform 
-					: mParentRef.mUIInstance.transform
+				mMgrRef.HierarchyContainer
 			);
 			mUIInstance.gameObject.SetActive(mUnfold);
 			mUIInstance.OnFold += TriggerFold;
 			mUIInstance.OnActivate += TriggerActivate;
-			mUIInstance.Initiate(mTransform);
-
-			{   // TODO : update this, so that it is modular
-				Vector3 pos = mUIInstance.transform.position;
-				pos.x = 795 + mColIdx * 25;
-				pos.y = 670 - mRowIdx * 2 * 25;
-				pos.z = 0;
-
-				mUIInstance.transform.position = pos;
-			}
+			mUIInstance.Initiate(mTransform, mTransform.childCount != 0, mRowIdx, mColIdx);
 		}
 
 		private void InitializeChildren()
         {
-			int childCount = mTransform.childCount;
 			int rowIdx = mRowIdx+1;
-			for (int i = 0; i < childCount; i++)
+			for (int i = 0; i < mTransform.childCount; i++)
 			{
 				TreeViewNode child = new(mMgrRef, mTransform.GetChild(i), this, rowIdx++, mColIdx+1);
 				mChildren.Add(child);
@@ -127,6 +115,8 @@ namespace VENTUS.UnityHierarchyView
         public void FoldMe(bool unfold)
         {
 			mUIInstance.gameObject.SetActive(unfold);
+			foreach (TreeViewNode child in mChildren)
+				child.FoldMe(unfold);
 		}
 
         private void TriggerActivate()
