@@ -15,12 +15,16 @@ public class TestItem : UINode
 	{
 		_name.text = transform.name;
 		gameObject.name = $"Hierarchy: {transform.name}";
-		_indentation.sizeDelta += _indentationMult * columnIndex * Vector2.right;
+		
+		float indentation = _indentationMult * columnIndex;
 		if (!hasChildren)
 		{
-			_foldButtonText.gameObject.SetActive(false);
-			_foldButton.interactable = false;
+			// compensate for lack of fold button
+			indentation += _foldButton.GetComponent<RectTransform>().sizeDelta.x;
+			_foldButton.gameObject.SetActive(false);
 		}
+
+		_indentation.sizeDelta = new(_indentation.sizeDelta.x + indentation, _indentation.sizeDelta.y);
 	}
 
 	public override void OnFolded(bool folded)
