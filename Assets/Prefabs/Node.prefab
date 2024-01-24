@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5547128676606024943}
         m_TargetAssemblyTypeName: VENTUS.UnityHierarchyView.UINode, VENTUS.UnityHierarchyView.Runtime
-        m_MethodName: FireOnFold
+        m_MethodName: Fold
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5547128676606024943}
   - component: {fileID: -8932647685422145423}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5547128676606024943}
         m_TargetAssemblyTypeName: VENTUS.UnityHierarchyView.UINode, VENTUS.UnityHierarchyView.Runtime
-        m_MethodName: FireOnActivate
+        m_MethodName: Activate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: {fileID: 6897594856612074241}
+  _foldButton: {fileID: 1677335727564543383}
 --- !u!114 &-8932647685422145423
 MonoBehaviour:
   m_ObjectHideFlags: 0

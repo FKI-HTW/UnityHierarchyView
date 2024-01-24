@@ -4,23 +4,23 @@ namespace VENTUS.UnityHierarchyView
 {
     public class HierarchyManager : MonoBehaviour
     {
-        #region fields
+		#region fields
 
-        public HierarchyConfiguration HierarchyConfiguration { get => _hierarchyConfiguration; set => _hierarchyConfiguration = value; }
-        [SerializeField] private HierarchyConfiguration _hierarchyConfiguration;
+		public UINode NodePrefab { get => _nodePrefab; set => _nodePrefab = value; }
+		[SerializeField] private UINode _nodePrefab;
 
-        public GameObject HierarchyContainer { get => _hierarchyContainer; }
+		public GameObject HierarchyContainer { get => _hierarchyContainer; }
         [SerializeField] private GameObject _hierarchyContainer;
 
         private TreeViewNode _parent;
 
-        [SerializeField] private Transform _test;
+        [SerializeField] private Transform _test; // for testing
 
-        #endregion
+		#endregion
 
-        private void Start()
+		private void Start()
         {
-            OpenTree(_test);
+            OpenTree(_test); // for testing
         }
 
         #region public methods
@@ -37,6 +37,5 @@ namespace VENTUS.UnityHierarchyView
         }
 
         #endregion
-
     }
 }
