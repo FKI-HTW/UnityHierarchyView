@@ -7,10 +7,10 @@ public class TestItem : UINode
 	[SerializeField] private TMP_Text _name;
 	[SerializeField] private TMP_Text _foldButton;
 
-	public override void Initiate(string name)
+	public override void Initiate(Transform transform)
 	{
-		_name.text = name;
-		gameObject.name = $"Hierarchy: {name}";
+		_name.text = transform.name;
+		gameObject.name = $"Hierarchy: {transform.name}";
 	}
 
 	public override void OnFolded(bool folded)

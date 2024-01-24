@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -88,9 +88,9 @@ namespace VENTUS.UnityHierarchyView
 					: mParentRef.mUIInstance.transform
 			);
 			mUIInstance.gameObject.SetActive(mUnfold);
-			mUIInstance.Initiate(mTransform.name);
 			mUIInstance.OnFold += TriggerFold;
 			mUIInstance.OnActivate += TriggerActivate;
+			mUIInstance.Initiate(mTransform);
 
 			{   // TODO : update this, so that it is modular
 				Vector3 pos = mUIInstance.transform.position;

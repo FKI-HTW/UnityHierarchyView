@@ -11,7 +11,7 @@ namespace VENTUS.UnityHierarchyView
         public void Fold() => OnFold?.Invoke();
         public void Activate() => OnActivate?.Invoke();
 
-        public virtual void Initiate(string name) { }
+        public virtual void Initiate(Transform transform) { }
         public virtual void OnFolded(bool fold) { }
     }
 }
