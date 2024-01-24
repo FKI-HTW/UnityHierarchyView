@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace VENTUS.UnityHierarchyView
+namespace CENTIS.UnityHierarchyView
 {
     public class UINode : MonoBehaviour
     {

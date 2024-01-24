@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace VENTUS.UnityHierarchyView
+namespace CENTIS.UnityHierarchyView
 {
     public class HierarchyManager : MonoBehaviour
     {
@@ -14,13 +14,13 @@ namespace VENTUS.UnityHierarchyView
 
         private TreeViewNode _parent;
 
-        [SerializeField] private Transform _test; // for testing
+        //[SerializeField] private Transform _test; // for testing
 
 		#endregion
 
 		private void Start()
         {
-			OpenHierarchyView(_test); // for testing
+			// OpenHierarchyView(_test); // for testing
         }
 
         #region public methods

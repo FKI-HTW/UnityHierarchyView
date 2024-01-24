@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace VENTUS.UnityHierarchyView
+namespace CENTIS.UnityHierarchyView
 {
     public class HierarchyViewActivatable : MonoBehaviour
     {
@@ -9,7 +9,7 @@ namespace VENTUS.UnityHierarchyView
 
 		private void Start()
 		{
-			OnActivate.AddListener(() => Debug.Log($"Activated: {transform.name}")); // for testing
+			//OnActivate.AddListener(() => Debug.Log($"Activated: {transform.name}")); // for testing
 		}
 	}
 }

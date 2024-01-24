@@ -256,7 +256,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5547128676606024943}
-        m_TargetAssemblyTypeName: VENTUS.UnityHierarchyView.UINode, VENTUS.UnityHierarchyView.Runtime
+        m_TargetAssemblyTypeName: CENTIS.UnityHierarchyView.UINode, CENTIS.UnityHierarchyView.Runtime
         m_MethodName: FoldNode
         m_Mode: 1
         m_Arguments:
@@ -546,7 +546,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5547128676606024943}
-        m_TargetAssemblyTypeName: VENTUS.UnityHierarchyView.UINode, VENTUS.UnityHierarchyView.Runtime
+        m_TargetAssemblyTypeName: CENTIS.UnityHierarchyView.UINode, CENTIS.UnityHierarchyView.Runtime
         m_MethodName: ActivateNode
         m_Mode: 1
         m_Arguments:
