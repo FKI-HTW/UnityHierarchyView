@@ -20,17 +20,17 @@ namespace VENTUS.UnityHierarchyView
 
 		private void Start()
         {
-            OpenTree(_test); // for testing
+			OpenHierarchyView(_test); // for testing
         }
 
         #region public methods
 
-        public void OpenTree(Transform transform)
+        public void OpenHierarchyView(Transform transform)
         {
             _parent = new(this, transform);
 		}
 
-        public void CloseTree()
+        public void CloseHierarchyView()
         {
             _parent.Dispose();
             _parent = null;
