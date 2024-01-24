@@ -1,9 +1,7 @@
 {
-    "name": "VENTUS.UnityHiearchyView.Runtime",
-    "rootNamespace": "VENTUS.UnityHiearchyView",
-    "references": [
-        "GUID:14295037dc7f2bc4f8ce6e6ca20d074e"
-    ],
+    "name": "CENTIS.UnityHierarchyView.Runtime",
+    "rootNamespace": "CENTIS.UnityHierarchyView",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
