@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace VENTUS.UnityHierarchyView
+namespace CENTIS.UnityHierarchyView
 {
 	public class TreeViewNode : IDisposable
 	{
@@ -80,7 +80,7 @@ namespace VENTUS.UnityHierarchyView
 
 		#endregion
 
-		#region private methods
+		#region methods
 
 		private void InitializeNode()
         {
@@ -108,15 +108,15 @@ namespace VENTUS.UnityHierarchyView
         {
 			mUnfold = !mUnfold;
 			foreach (TreeViewNode child in mChildren)
-				child.FoldMe(mUnfold);
+				child.SetActive(mUnfold);
 			mUIInstance.OnFolded(mUnfold);
         }
 
-        public void FoldMe(bool unfold)
+        public void SetActive(bool active)
         {
-			mUIInstance.gameObject.SetActive(unfold);
+			mUIInstance.gameObject.SetActive(active);
 			foreach (TreeViewNode child in mChildren)
-				child.FoldMe(unfold);
+				child.SetActive(active);
 		}
 
         private void TriggerActivate()
