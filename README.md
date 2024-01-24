@@ -1,9 +1,8 @@
-# UnityHierarchyView
+# UnityFileExplorer
 
 ## Development
 
 The Unity project that holds the package and the project configuration is on the `develop` branch. </br>
-For the development `feature` branches should be used, that can then be merged onto the `develop` branch. </br>
 Once a new Version is ready to be published create a pull request from the `develop` to the `main` branch </br> 
 The version of the package that can be used to import it into Unity is on the `upm` branch. </br>
 
@@ -11,7 +10,7 @@ The version of the package that can be used to import it into Unity is on the `u
 
 > `Assets` : all assets used for the development of the package are placed here </br>
 >> assets should adhere to the normal unity folder structure (`Scene`, `Resources`, `Materials` etc.) </br>
->> `/UnityHierarchyView` : all assets that are part of the final package are placed here </br>
+>> `/UnityFileExplorer` : all assets that are part of the final package are placed here </br>
 >>> `/Editor/Scripts` : all editor scripts such as custom editors or settings are placed here </br>
 >>> `/Runtime/Scripts` : all runtime scripts are placed here </br>
 >>> `/Samples~` : optional samples of the package are placed here </br>
@@ -25,9 +24,9 @@ The version of the package that can be used to import it into Unity is on the `u
 ## Package Installation and user guide
 
 To import this package into Unity the import via URL can be used.</br>
-For example: `https://github.com/CENTIS-HTW/UnityHierarchyView.git#<version>` </br>
+For example: `https://github.com/CENTIS-HTW/UnityFileExplorer.git#<version>` </br>
 
-For further details, please refer to [this readme](Assets/UnityHierarchyView/README.md) inside the package.
+For further details, please refer to [this readme](Assets/UnityFileExplorer/README.md) inside the package.
 
 ### Pushing the Unity package to the upm branch
 
@@ -43,12 +42,12 @@ Otherwise Unity will throw an error stating that the contained scripts can't be 
 This practice follows the Unity guidelines for creating the package structure.
 This only has to be done for the versions on the upm branch!
 
-Before you start, check that the version of the package under `Assets/UnityHierarchyView/package.json` is correct.
-Also check that `Assets/UnityHierarchyView/CHANGELOG.md` is updated, to reflect the changes made.
+Before you start, check that the version of the package under `Assets/UnityFileExplorer/package.json` is correct.
+Also check that `Assets/UnityFileExplorer/CHANGELOG.md` is updated, to reflect the changes made.
 
 Note that `"version"` needs to be replaced by the version number that you want to release.
 ```
-git subtree split --prefix=Assets/UnityHierarchyView --branch upm
+git subtree split --prefix=Assets/UnityFileExplorer --branch upm
 git tag "version" upm
 git push origin upm --tags
 ```
