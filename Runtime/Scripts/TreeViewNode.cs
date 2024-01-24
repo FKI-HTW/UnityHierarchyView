@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,8 @@ namespace VENTUS.UnityHierarchyView
         private readonly TreeViewNode mParentRef;
         private readonly Transform mTransform;
         private readonly List<TreeViewNode> mChildren;
-        private readonly int mDepth;
+        private readonly int mRowIdx; // vertical depth
+        private readonly int mColIdx; // horizontal depth
 
 		private UINode mUIInstance;
         
@@ -29,19 +30,21 @@ namespace VENTUS.UnityHierarchyView
             mParentRef = null;
             mTransform = transform;
             mChildren = new();
-            mDepth = 0;
+			mRowIdx = 0;
+			mColIdx = 0;
 
 			InitializeNode();
             InitializeChildren();
 		}
 
-        private TreeViewNode(HierarchyManager manager, Transform transform, TreeViewNode parent, int depth)
+        private TreeViewNode(HierarchyManager manager, Transform transform, TreeViewNode parent, int rowIdx, int colIdx)
         {
             mMgrRef = manager;
 			mParentRef = parent;
             mTransform = transform;
 			mChildren = new();
-			mDepth = depth;
+			mRowIdx = rowIdx;
+			mColIdx = colIdx;
 
 			InitializeNode();
             InitializeChildren();
@@ -94,8 +97,8 @@ namespace VENTUS.UnityHierarchyView
 
 			{   // TODO : update this, so that it is modular
 				Vector3 pos = mUIInstance.transform.position;
-				pos.x = 795 + mDepth * 25;
-				pos.y = 670 - mDepth * 2 * 25;
+				pos.x = 795 + mColIdx * 25;
+				pos.y = 670 - mRowIdx * 2 * 25;
 				pos.z = 0;
 
 				mUIInstance.transform.position = pos;
@@ -105,9 +108,10 @@ namespace VENTUS.UnityHierarchyView
 		private void InitializeChildren()
         {
 			int childCount = mTransform.childCount;
+			int rowIdx = mRowIdx+1;
 			for (int i = 0; i < childCount; i++)
 			{
-				TreeViewNode child = new(mMgrRef, mTransform.GetChild(i), this, mDepth + 1);
+				TreeViewNode child = new(mMgrRef, mTransform.GetChild(i), this, rowIdx++, mColIdx+1);
 				mChildren.Add(child);
 			}
 		}
