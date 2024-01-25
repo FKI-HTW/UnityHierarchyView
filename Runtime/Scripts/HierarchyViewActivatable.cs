@@ -9,7 +9,7 @@ namespace CENTIS.UnityHierarchyView
 
 		private void Start()
 		{
-			//OnActivate.AddListener(() => Debug.Log($"Activated: {transform.name}")); // for testing
+			OnActivate.AddListener(() => Debug.Log($"Activated: {transform.name}")); // for testing
 		}
 	}
 }
