@@ -14,23 +14,16 @@ namespace CENTIS.UnityHierarchyView
 
         private TreeViewNode _parent;
 
-        [SerializeField] private Transform _test; // for testing
-
 		#endregion
-
-		private void Start()
-        {
-			OpenHierarchyView(_test); // for testing
-        }
 
         #region public methods
 
-        public void OpenHierarchyView(Transform transform)
+        public virtual void OpenHierarchyView(Transform transform)
         {
             _parent = new(this, transform);
 		}
 
-        public void CloseHierarchyView()
+        public virtual void CloseHierarchyView()
         {
             _parent.Dispose();
             _parent = null;
