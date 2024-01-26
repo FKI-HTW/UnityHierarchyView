@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -116,7 +116,7 @@ namespace CENTIS.UnityHierarchyView
         {
 			mUIInstance.gameObject.SetActive(active);
 			foreach (TreeViewNode child in mChildren)
-				child.SetActive(active);
+				child.SetActive(active && mUnfold);
 		}
 
         private void TriggerActivate()
