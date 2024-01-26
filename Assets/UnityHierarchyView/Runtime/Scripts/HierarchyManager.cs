@@ -4,12 +4,12 @@ namespace CENTIS.UnityHierarchyView
 {
     public class HierarchyManager : MonoBehaviour
     {
-		#region fields
+        #region fields
 
-		public UINode NodePrefab { get => _nodePrefab; set => _nodePrefab = value; }
+        public UINode NodePrefab => _nodePrefab;
 		[SerializeField] private UINode _nodePrefab;
 
-		public Transform HierarchyContainer { get => _hierarchyContainer; }
+		public Transform HierarchyContainer => _hierarchyContainer;
         [SerializeField] private Transform _hierarchyContainer;
 
         private TreeViewNode _parent;

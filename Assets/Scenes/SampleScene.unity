@@ -172,7 +172,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 183497857}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &183497859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -293,7 +305,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 208420440}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &208420442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -517,7 +541,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 455675421}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &455675423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -711,7 +747,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 590179029}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &613827520
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +880,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 613827521}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1250,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1529917249}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1610816709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1384,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1610816713}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1629965249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1448,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1629965250}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1629965252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1558,7 +1654,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnActivate:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2137439313}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: DebugActivatable
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1717677591}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1758503391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017933aa8f8dbb644b72aace1151b4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _test: {fileID: 1610816713}
+  _testTransform: {fileID: 1610816713}
   _manager: {fileID: 1488531849}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
