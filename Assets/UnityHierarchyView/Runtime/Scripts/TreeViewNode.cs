@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CENTIS.UnityHierarchyView
 {
-	public class TreeViewNode : IDisposable
+	internal class TreeViewNode : IDisposable
 	{
 		#region fields
 
@@ -116,7 +116,7 @@ namespace CENTIS.UnityHierarchyView
         {
 			mUIInstance.gameObject.SetActive(active);
 			foreach (TreeViewNode child in mChildren)
-				child.SetActive(active);
+				child.SetActive(active && mUnfold);
 		}
 
         private void TriggerActivate()

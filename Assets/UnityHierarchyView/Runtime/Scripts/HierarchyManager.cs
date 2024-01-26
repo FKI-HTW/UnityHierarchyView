@@ -4,33 +4,26 @@ namespace CENTIS.UnityHierarchyView
 {
     public class HierarchyManager : MonoBehaviour
     {
-		#region fields
+        #region fields
 
-		public UINode NodePrefab { get => _nodePrefab; set => _nodePrefab = value; }
+        public UINode NodePrefab => _nodePrefab;
 		[SerializeField] private UINode _nodePrefab;
 
-		public Transform HierarchyContainer { get => _hierarchyContainer; }
+		public Transform HierarchyContainer => _hierarchyContainer;
         [SerializeField] private Transform _hierarchyContainer;
 
         private TreeViewNode _parent;
 
-        //[SerializeField] private Transform _test; // for testing
-
 		#endregion
-
-		private void Start()
-        {
-			// OpenHierarchyView(_test); // for testing
-        }
 
         #region public methods
 
-        public void OpenHierarchyView(Transform transform)
+        public virtual void OpenHierarchyView(Transform transform)
         {
             _parent = new(this, transform);
 		}
 
-        public void CloseHierarchyView()
+        public virtual void CloseHierarchyView()
         {
             _parent.Dispose();
             _parent = null;
