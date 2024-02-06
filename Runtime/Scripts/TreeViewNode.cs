@@ -69,12 +69,13 @@ namespace CENTIS.UnityHierarchyView
 				{
 					mUIInstance.OnFold -= TriggerFold;
 					mUIInstance.OnActivate -= TriggerActivate;
-					GameObject.Destroy(mTransform.gameObject);
-					foreach (var child in mChildren)
-						child.Dispose();
 				}
 
 				disposedValue = true;
+
+				GameObject.Destroy(mUIInstance.gameObject);
+				foreach (var child in mChildren)
+					child.Dispose();
 			}
 		}
 
