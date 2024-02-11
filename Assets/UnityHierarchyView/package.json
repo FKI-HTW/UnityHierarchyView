@@ -11,7 +11,13 @@
     "keywords": [
         "Unity Package"
     ],
-    "samples": [],
+    "samples": [
+        {
+          "displayName": "Example UI Implementation",
+          "description": "Example scene of an implemented UI hierarchy",
+          "path": "Samples~/ExampleUI"
+        }
+    ],
     "author": {
         "name": "CENTIS HTW-Berlin",
         "email": "centis-htw-bounces@lists.htw-berlin.de",
