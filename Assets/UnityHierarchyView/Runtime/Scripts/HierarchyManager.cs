@@ -30,6 +30,18 @@ namespace CENTIS.UnityHierarchyView
 			_parent = InitializeHierarchyNodes(transform, null, 0, 0, startFoldedOut);
 		}
 
+		/// <summary>
+		/// Creates a UI representation of the given transform's hierarchy.
+		/// All nodes, except nodes between the root and initial node, are folded in.
+		/// </summary>
+		/// <param name="root">The transform of whose hierarchy a UI is constructed</param>
+		/// <param name="initial">The transform whose parent nodes inclusive itself should be folded out</param>
+		public virtual void OpenHierarchyView(Transform root, Transform initial)
+        {
+			_parent = InitializeHierarchyNodes(root, null, 0, 0, false);
+            _hierarchyNodes[initial].FoldOutStructure();
+        }
+
         /// <summary>
         /// Closes and unloads the created hierarchy nodes.
         /// </summary>
