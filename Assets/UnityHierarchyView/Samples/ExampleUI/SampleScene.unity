@@ -1108,8 +1108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93bc06d638984110b64f31ee7d73a522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nodePrefab: {fileID: 5547128676606024943, guid: 0f017af1c9714d80a1961158f5532f1e, type: 3}
-  _hierarchyContainer: {fileID: 2107964297}
+  _configuration:
+    _nodePrefab: {fileID: 5547128676606024943, guid: 0f017af1c9714d80a1961158f5532f1e, type: 3}
+    _hierarchyContainer: {fileID: 2107964297}
 --- !u!4 &1488531850
 Transform:
   m_ObjectHideFlags: 0

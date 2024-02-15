@@ -7,13 +7,14 @@ namespace CENTIS.UnityHierarchyView
     {
         #region fields
 
-        public UINode NodePrefab => _nodePrefab;
-		[SerializeField] private UINode _nodePrefab;
+        [SerializeField] private HierarchyConfiguration _configuration;
+        public HierarchyConfiguration Configuration 
+        {
+            get => _configuration;
+            set => _configuration = value;
+        }
 
-		public Transform HierarchyContainer => _hierarchyContainer;
-        [SerializeField] private Transform _hierarchyContainer;
-
-        private TreeViewNode _parent;
+		private TreeViewNode _parent;
         private readonly Dictionary<Transform, TreeViewNode> _hierarchyNodes = new();
 
 		#endregion
@@ -57,12 +58,12 @@ namespace CENTIS.UnityHierarchyView
 
         private TreeViewNode InitializeHierarchyNodes(Transform transform, TreeViewNode parent, int rowIdx, int colIdx, bool foldOut)
         {
-			TreeViewNode node = new(this, transform, parent, rowIdx++, colIdx + 1, foldOut);
+			TreeViewNode node = new(_configuration, transform, parent, rowIdx++, colIdx++, foldOut);
             _hierarchyNodes.Add(transform, node);
 
 			for (int i = 0; i < transform.childCount; i++)
 			{
-                TreeViewNode childNode = InitializeHierarchyNodes(transform.GetChild(i), node, rowIdx, colIdx + 1, foldOut);
+                TreeViewNode childNode = InitializeHierarchyNodes(transform.GetChild(i), node, rowIdx, colIdx, foldOut);
                 node.AddChild(childNode);
 			}
 
