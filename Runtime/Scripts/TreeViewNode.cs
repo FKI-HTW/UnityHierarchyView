@@ -8,7 +8,7 @@ namespace CENTIS.UnityHierarchyView
 	{
 		#region fields
 
-        private readonly HierarchyManager mMgrRef;
+        private readonly HierarchyConfiguration mConfig;
         private readonly Transform mTransform;
         private readonly TreeViewNode mParentRef;
         private readonly List<TreeViewNode> mChildren;
@@ -24,9 +24,10 @@ namespace CENTIS.UnityHierarchyView
 
 		#region lifecycle
 
-        public TreeViewNode(HierarchyManager manager, Transform transform, TreeViewNode parent, int rowIdx, int colIdx, bool unfold, Transform initialNode = null)
+        public TreeViewNode(HierarchyConfiguration config, Transform transform, TreeViewNode parent, 
+			int rowIdx, int colIdx, bool unfold)
         {
-            mMgrRef = manager;
+            mConfig = config;
             mTransform = transform;
 			mParentRef = parent;
 			mChildren = new();
@@ -84,8 +85,8 @@ namespace CENTIS.UnityHierarchyView
 		private void InitializeNode()
         {
 			mUIInstance = GameObject.Instantiate(
-                mMgrRef.NodePrefab,
-				mMgrRef.HierarchyContainer
+                mConfig.NodePrefab,
+				mConfig.HierarchyContainer
 			);
 
 			mUIInstance.gameObject.SetActive(mFoldedOut);
