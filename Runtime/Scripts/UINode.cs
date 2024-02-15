@@ -11,7 +11,7 @@ namespace CENTIS.UnityHierarchyView
         public void FoldNode() => OnFold?.Invoke();
         public void ActivateNode() => OnActivate?.Invoke();
 
-        public virtual void Initiate(Transform transform, bool hasChildren, int rowIndex, int columnIndex) { }
-        public virtual void OnFolded(bool fold) { }
+        public virtual void Initiate(Transform transform, bool foldedOut, bool hasChildren, int rowIndex, int columnIndex) { }
+        public virtual void OnFolded(bool foldedOut) { }
     }
 }

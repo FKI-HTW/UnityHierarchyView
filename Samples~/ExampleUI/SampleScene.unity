@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 183497859}
   - component: {fileID: 183497858}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 208420442}
   - component: {fileID: 208420441}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 455675423}
   - component: {fileID: 455675422}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 590179030}
   - component: {fileID: 590179033}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 613827522}
   - component: {fileID: 613827525}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1058,8 +1058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06e7b89180bf1d4f912ba645659118c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nodePrefab: {fileID: 5547128676606024943, guid: 50552767fcd4c364ebe877f337c98aa5, type: 3}
-  _hierarchyContainer: {fileID: 2107964297}
+  _configuration:
+    _nodePrefab: {fileID: 5547128676606024943, guid: 0f017af1c9714d80a1961158f5532f1e, type: 3}
+    _hierarchyContainer: {fileID: 2107964297}
 --- !u!4 &1488531850
 Transform:
   m_ObjectHideFlags: 0
@@ -1089,7 +1090,7 @@ GameObject:
   - component: {fileID: 1529917250}
   - component: {fileID: 1529917253}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,7 +1218,7 @@ GameObject:
   - component: {fileID: 1610816710}
   - component: {fileID: 1610816714}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1341,7 +1342,7 @@ GameObject:
   - component: {fileID: 1629965252}
   - component: {fileID: 1629965251}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1466,7 +1467,7 @@ GameObject:
   - component: {fileID: 1717677592}
   - component: {fileID: 1717677595}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1752,6 +1753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _testTransform: {fileID: 1610816713}
+  _testTransform2: {fileID: 455675421}
   _manager: {fileID: 1488531849}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
