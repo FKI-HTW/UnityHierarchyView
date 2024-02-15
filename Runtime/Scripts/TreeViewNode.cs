@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -121,6 +121,12 @@ namespace CENTIS.UnityHierarchyView
 		public void AddChild(TreeViewNode child)
 		{
 			mChildren.Add(child);
+		}
+
+		public void FoldOutStructure()
+		{
+			TriggerFold();
+			mParentRef?.FoldOutStructure();
 		}
 
 		#endregion
