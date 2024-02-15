@@ -11,11 +11,13 @@ public class TestItem : UINode
 	[SerializeField] private TMP_Text _name;
 	[SerializeField] private float _indentationMult;
 
-	public override void Initiate(Transform transform, bool hasChildren, int rowIndex, int columnIndex)
+	public override void Initiate(Transform transform, bool foldedOut, bool hasChildren, int rowIndex, int columnIndex)
 	{
 		_name.text = transform.name;
 		gameObject.name = $"Hierarchy: {transform.name}";
-		
+
+		_foldButtonText.text = foldedOut ? "-" : "+";
+
 		float indentation = _indentationMult * columnIndex;
 		if (!hasChildren)
 		{
@@ -27,8 +29,8 @@ public class TestItem : UINode
 		_indentation.sizeDelta = new(_indentation.sizeDelta.x + indentation, _indentation.sizeDelta.y);
 	}
 
-	public override void OnFolded(bool folded)
+	public override void OnFolded(bool foldedOut)
 	{
-		_foldButtonText.text = folded ? "+" : "-";
+		_foldButtonText.text = foldedOut ? "-" : "+";
 	}
 }

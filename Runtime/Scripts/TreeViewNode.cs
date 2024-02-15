@@ -1,53 +1,40 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace CENTIS.UnityHierarchyView
 {
-	internal class TreeViewNode : IDisposable
+	internal class TreeViewNode : IDisposable, IEquatable<TreeViewNode>
 	{
 		#region fields
 
         private readonly HierarchyManager mMgrRef;
-        private readonly TreeViewNode mParentRef;
         private readonly Transform mTransform;
+        private readonly TreeViewNode mParentRef;
         private readonly List<TreeViewNode> mChildren;
-        private readonly int mRowIdx; // vertical depth
-        private readonly int mColIdx; // horizontal depth
+        private readonly int mRowIdx;
+        private readonly int mColIdx;
 
 		private UINode mUIInstance;
         
-		private bool mUnfold = true;
+		private bool mFoldedOut;
 		private bool disposedValue;
 
 		#endregion
 
 		#region lifecycle
 
-		public TreeViewNode(HierarchyManager manager, Transform transform)
+        public TreeViewNode(HierarchyManager manager, Transform transform, TreeViewNode parent, int rowIdx, int colIdx, bool unfold, Transform initialNode = null)
         {
             mMgrRef = manager;
-            mParentRef = null;
             mTransform = transform;
-            mChildren = new();
-			mRowIdx = 0;
-			mColIdx = 0;
-
-			InitializeNode();
-            InitializeChildren();
-		}
-
-        private TreeViewNode(HierarchyManager manager, Transform transform, TreeViewNode parent, int rowIdx, int colIdx)
-        {
-            mMgrRef = manager;
 			mParentRef = parent;
-            mTransform = transform;
 			mChildren = new();
 			mRowIdx = rowIdx;
 			mColIdx = colIdx;
+			mFoldedOut = unfold;
 
 			InitializeNode();
-            InitializeChildren();
 		}
 
 		~TreeViewNode()
@@ -79,6 +66,17 @@ namespace CENTIS.UnityHierarchyView
 			}
 		}
 
+		public bool Equals(TreeViewNode other)
+		{
+			if (other == null) return false;
+			return mTransform.Equals(other.mTransform);
+		}
+
+		public override int GetHashCode()
+		{
+			return mTransform.GetHashCode();
+		}
+
 		#endregion
 
 		#region methods
@@ -89,35 +87,29 @@ namespace CENTIS.UnityHierarchyView
                 mMgrRef.NodePrefab,
 				mMgrRef.HierarchyContainer
 			);
-			mUIInstance.gameObject.SetActive(mUnfold);
+
+			mUIInstance.gameObject.SetActive(mFoldedOut);
 			mUIInstance.OnFold += TriggerFold;
 			mUIInstance.OnActivate += TriggerActivate;
-			mUIInstance.Initiate(mTransform, mTransform.childCount != 0, mRowIdx, mColIdx);
-		}
+			mUIInstance.Initiate(mTransform, mFoldedOut, mTransform.childCount != 0, mRowIdx, mColIdx);
 
-		private void InitializeChildren()
-        {
-			int rowIdx = mRowIdx+1;
-			for (int i = 0; i < mTransform.childCount; i++)
-			{
-				TreeViewNode child = new(mMgrRef, mTransform.GetChild(i), this, rowIdx++, mColIdx+1);
-				mChildren.Add(child);
-			}
+			if (mParentRef is null)
+				mUIInstance.gameObject.SetActive(true);
 		}
 
         private void TriggerFold()
         {
-			mUnfold = !mUnfold;
+			mFoldedOut = !mFoldedOut;
 			foreach (TreeViewNode child in mChildren)
-				child.SetActive(mUnfold);
-			mUIInstance.OnFolded(mUnfold);
+				child.SetActive(mFoldedOut);
+			mUIInstance.OnFolded(mFoldedOut);
         }
 
-        public void SetActive(bool active)
+        private void SetActive(bool active)
         {
 			mUIInstance.gameObject.SetActive(active);
 			foreach (TreeViewNode child in mChildren)
-				child.SetActive(active && mUnfold);
+				child.SetActive(active && mFoldedOut);
 		}
 
         private void TriggerActivate()
@@ -125,6 +117,11 @@ namespace CENTIS.UnityHierarchyView
             if (mTransform.TryGetComponent<HierarchyViewActivatable>(out var comp))
                 comp.OnActivate?.Invoke();
         }
+
+		public void AddChild(TreeViewNode child)
+		{
+			mChildren.Add(child);
+		}
 
 		#endregion
 	}
