@@ -1,15 +1,15 @@
 {
     "name": "de.htw-berlin.centis.unityhierarchyview",
-    "version": "0.1.1",
-    "displayName": "UnityHierarchyView",
+    "version": "0.2.1",
+    "displayName": "Unity Hierarchy View",
     "description": "",
     "unity": "2022.3",
-    "unityRelease": "11f1",
-    "documentationUrl": "https://github.com/CENTIS-HTW/UnityHierarchyView/blob/main/Assets/UnityHierarchyView/README.md",
-    "changelogUrl": "https://github.com/CENTIS-HTW/UnityHierarchyView/blob/main/Assets/UnityHierarchyView/CHANGELOG.md",
-    "licensesUrl": "https://github.com/CENTIS-HTW/UnityHierarchyView/blob/main/Assets/UnityHierarchyView/LICENSE.md",
+    "documentationUrl": "https://github.com/FKI-HTW/UnityHierarchyView/blob/main/Assets/UnityHierarchyView/README.md",
+    "changelogUrl": "https://github.com/FKI-HTW/UnityHierarchyView/blob/main/Assets/UnityHierarchyView/CHANGELOG.md",
+    "licensesUrl": "https://github.com/FKI-HTW/UnityHierarchyView/blob/main/Assets/UnityHierarchyView/LICENSE.md",
     "keywords": [
-        "Unity Package"
+        "Unity Package",
+        "Hierarchy View"
     ],
     "samples": [
         {
